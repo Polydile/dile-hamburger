@@ -8,18 +8,6 @@ import readme from '../README.md';
 storiesOf('dile-hamburger', module)
   .addDecorator(withKnobs)
   .add(
-    'Inactive hamburguer',
-    () => html`
-      <dile-hamburger></dile-hamburger>
-      `,
-  )
-  .add(
-    'Active hamburguer',
-    () => html`
-      <dile-hamburger active></dile-hamburger>
-      `,
-  )
-  .add(
     'Interactive',
     () => html`
       <dile-hamburger id="hamburger" @click="${
@@ -29,6 +17,20 @@ storiesOf('dile-hamburger', module)
         }
       }"></dile-hamburger>
       <p>Is the same component, but we have defined a click handler to change the hamburguer state.</p>
+      `,
+  )
+  .add(
+    'Inactive hamburguer',
+    () => html`
+      <dile-hamburger></dile-hamburger>
+      <p>This instance only shows the inactive hamburguer state. Has no user interaction.</p>
+      `,
+  )
+  .add(
+    'Active hamburguer',
+    () => html`
+      <dile-hamburger active></dile-hamburger>
+      <p>This instance only shows the active hamburguer state. Has no user interaction.</p>
       `,
   )
   .add('Documentation', () => withClassPropertiesKnobs(DileHamburger), { notes: { markdown: readme } })
