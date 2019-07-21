@@ -37,12 +37,12 @@ export class DileHamburger extends LitElement {
       .hamburger.is-active .hamburger-inner,
       .hamburger.is-active .hamburger-inner::before,
       .hamburger.is-active .hamburger-inner::after {
-        background-color: #000; 
+        background-color: var(--dile-hamburger-color, #000); 
       }
 
       .hamburger-box {
-        width: var(--eit-hamburger-width, 24px);
-        height: var(--eit-hamburger-height, 14px);
+        width: var(--dile-hamburger-width, 24px);
+        height: var(--dile-hamburger-height, 24px);
         display: inline-block;
         position: relative; }
 
@@ -52,10 +52,10 @@ export class DileHamburger extends LitElement {
         margin-top: 0px; 
       }
       .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        width: var(--eit-hamburger-width, 24px);
-        height: var(--eit-hamburger-line-size, 3px);
-        background-color: #000;
-        border-radius: var(--eit-hamburger-line-size, 3px);
+        width: var(--dile-hamburger-width, 24px);
+        height: var(--dile-hamburger-line-size, 3px);
+        background-color: var(--dile-hamburger-color, #000);
+        border-radius: var(--dile-hamburger-line-size, 3px);
         position: absolute;
         transition-property: transform;
         transition-duration: 0.15s;
@@ -66,10 +66,10 @@ export class DileHamburger extends LitElement {
         display: block; 
       }
       .hamburger-inner::before {
-        top: var(--eit-hamburger-line-separation, -6px); 
+        top: var(--dile-hamburger-line-separation, -6px); 
       }
       .hamburger-inner::after {
-        bottom: var(--eit-hamburger-line-separation, -6px); 
+        bottom: var(--dile-hamburger-line-separation, -6px); 
       }
 
       /*

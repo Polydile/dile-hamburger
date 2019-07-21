@@ -16,7 +16,28 @@ storiesOf('dile-hamburger', module)
           ham.active = !ham.active;
         }
       }"></dile-hamburger>
-      <p>Is the same component, but we have defined a click handler to change the hamburguer state.</p>
+      <p>In this demo it's defined a click handler to change the hamburguer state.</p>
+      `,
+  )
+  .add(
+    'Customized',
+    () => html`
+      <style>
+        .customized {
+          --dile-hamburger-color: #3cb;
+          --dile-hamburger-line-size: 6px;
+          --dile-hamburger-width: 48px;
+          --dile-hamburger-height: 48px;
+          --dile-hamburger-line-separation: 12px;
+        }
+      </style>
+      <dile-hamburger class="customized" id="hamburger" @click="${
+        () => {
+          let ham = document.getElementById('hamburger');
+          ham.active = !ham.active;
+        }
+      }"></dile-hamburger>
+      <p>In this demo it's defined a click handler to change the hamburguer state. Using some customization css properties.</p>
       `,
   )
   .add(
