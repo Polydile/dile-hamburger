@@ -37,7 +37,7 @@ export class DileHamburger extends LitElement {
       .hamburger.is-active .hamburger-inner,
       .hamburger.is-active .hamburger-inner::before,
       .hamburger.is-active .hamburger-inner::after {
-        background-color: var(--dile-hamburger-active-color, #000); 
+        background-color: var(--dile-hamburger-color, #000); 
       }
 
       .hamburger-box {
