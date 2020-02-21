@@ -25,6 +25,7 @@ storiesOf('dile-hamburger', module)
       <style>
         .customized {
           --dile-hamburger-color: #3cb;
+          --dile-hamburger-active-color: #c3b;
           --dile-hamburger-line-size: 6px;
           --dile-hamburger-width: 48px;
           --dile-hamburger-height: 48px;
